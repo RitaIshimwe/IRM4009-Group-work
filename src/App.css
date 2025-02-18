@@ -1,0 +1,33 @@
+.App{
+  width: 100%;
+  height: auto;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+html, body {
+  /* Ensures the full height of the page is available */
+  margin: 0;    /* Removes default margin */
+}
+
+
+main {
+  flex: 1; /* This will push the footer to the bottom */
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center vertically */
+  align-items: center;      /* Center horizontally */
+  height: 100vh;            /* Full viewport height */
+  text-align: center;       /* Center text */
+  background-color: #f8f9fa; /* Light background for visibility */
+  color: #333; /* Ensure text is visible */
+  padding: 20px;
+}

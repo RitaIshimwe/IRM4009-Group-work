@@ -1,0 +1,62 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+  
+  .chatbot-help-btn {
+    background-color: #101419;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .chatbox {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    background: #101113;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .chat-body {
+    padding: 10px;
+  }
+  
+  .chat-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #15181b;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .chat-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+  }

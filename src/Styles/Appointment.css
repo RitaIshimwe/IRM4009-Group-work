@@ -1,0 +1,27 @@
+.page-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .schedule-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .schedule-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .confirmation-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    margin-top: 20px;
+  }
