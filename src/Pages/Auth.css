@@ -1,0 +1,19 @@
+.full-page-background {
+    background-image: url('../assets/Serv.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-container {
+    text-align: center;
+    max-width: 300px;
+    background-color: rgba(13, 9, 76, 0.8); /* Transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+  }

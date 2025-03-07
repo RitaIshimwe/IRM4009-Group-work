@@ -21,13 +21,17 @@ main {
   flex: 1; /* This will push the footer to the bottom */
 }
 .page-container {
+  background-image: url('../src/assets/loginB.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;  /* Center vertically */
   align-items: center;      /* Center horizontally */
   height: 100vh;            /* Full viewport height */
   text-align: center;       /* Center text */
-  background-color: #f8f9fa; /* Light background for visibility */
-  color: #333; /* Ensure text is visible */
+  background-color:#04203b; /* Light background for visibility */
+  color: rgb(172, 62, 164); /* Ensure text is visible */
   padding: 20px;
 }

@@ -1,0 +1,25 @@
+.page-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .policy-section {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .policy-title {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0073e6;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .policy-content {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+  }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Pages/Auth.css";
 
 function Auth() {
   const [username, setUsername] = useState("");
