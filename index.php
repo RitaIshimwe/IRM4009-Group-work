@@ -1,4 +1,6 @@
 <?php
+include("database.php");
+
 // We need to use sessions, so you should always initialize sessions using the below function
 session_start();
 // If the user is logged in, redirect to the home page
@@ -6,7 +8,27 @@ if (isset($_SESSION['account_loggedin'])) {
     header('Location: home.php');
     exit;
 }
+
+$username = "John Doe";
+$password = "secretword";
+$hash = password_hash($password, PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO users (username, password)
+                    VALUES ('$username', '$hash')";
+
+//$sql2 = "INSERT INTO users (username, password) VALUES ('test', '$hash')";
+
+try {
+    mysqli_query($conn, $sql);
+    echo "User is now registered";
+} catch (mysqli_sql_exception) {
+    echo "Could not register user";
+}
+
+mysqli_close($conn);
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
