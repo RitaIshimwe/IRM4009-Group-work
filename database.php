@@ -1,3 +1,4 @@
+// The name of the MySQL database I created with XAMPP is 'medsecuredb'
 <?php
 
 $db_server = "localhost";
