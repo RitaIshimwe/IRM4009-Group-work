@@ -1,0 +1,179 @@
+/* Full-Screen Background */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a; /* Dark background */
+  position: relative;
+}
+
+/* Dark Overlay (Optional for Styling) */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Centered Login Box */
+.auth-box {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Login Title */
+.auth-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #b30000;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Input Field */
+.input-group input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Input Icon */
+.input-icon {
+  margin-right: 10px;
+  color: #800000;
+}
+
+/* Submit Button */
+.auth-button {
+  background-color: #b30000;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.auth-button:hover {
+  background-color: #800000;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  color: #b30000;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #800000;
+}
+
+/* Forgot Password Modal */
+.forgot-password-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 350px; /* Keeps it responsive */
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Modal Background Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Modal Close Button */
+.close-modal {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Reset Button */
+.reset-button {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.reset-button:hover {
+  background-color: #800000;
+}
+
+/* Input for Email */
+.email-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .auth-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .forgot-password-modal {
+    width: 90%;
+    max-width: 280px; /* Adjust for small screens */
+  }
+}

@@ -1,0 +1,94 @@
+/* Scoped CSS for Appointment Page */
+.appointment-page {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Ensures the page takes full height */
+}
+
+main {
+  flex-grow: 1;  /* Ensures that the main content takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-card {
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 700px;
+}
+
+.heading {
+  color: #b30000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+input, select, textarea {
+  border: 1px solid #b30000;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #800000;
+}
+
+.calendar-container {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+}
+
+/* Fix for input overlap on calendar */
+.input-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.input-box:focus {
+  z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .appointment-card {
+    width: 95%;
+    padding: 15px;
+  }
+  .calendar-container {
+    max-width: 100%;
+    padding: 5px;
+  }
+}
