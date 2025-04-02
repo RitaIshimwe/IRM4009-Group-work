@@ -6,7 +6,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 
 // Database configuration (replace with your actual credentials)
 $db_host = 'localhost';
-$db_name = 'your_database';
+$db_name = 'medsecuredb';
 $db_user = 'your_username';
 $db_pass = 'your_password';
 
