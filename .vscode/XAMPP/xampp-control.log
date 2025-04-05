@@ -1,0 +1,72 @@
+9:13:19 PM  [main] 	Initializing Control Panel
+9:13:19 PM  [main] 	Windows Version:  Home  64-bit
+9:13:19 PM  [main] 	XAMPP Version: 8.2.12
+9:13:19 PM  [main] 	Control Panel Version: 3.3.0  [ Compiled: Apr 6th 2021 ]
+9:13:19 PM  [main] 	You are not running with administrator rights! This will work for
+9:13:19 PM  [main] 	most application stuff but whenever you do something with services
+9:13:19 PM  [main] 	there will be a security dialogue or things will break! So think 
+9:13:19 PM  [main] 	about running this application with administrator rights!
+9:13:19 PM  [main] 	XAMPP Installation Directory: "c:\users\ishim\onedrive\desktop\xampp\"
+9:13:19 PM  [main] 	Checking for prerequisites
+9:13:23 PM  [main] 	All prerequisites found
+9:13:23 PM  [main] 	Initializing Modules
+9:13:23 PM  [mysql] 	Problem detected!
+9:13:23 PM  [mysql] 	Port 3306 in use by "Unable to open process"!
+9:13:23 PM  [mysql] 	MySQL WILL NOT start without the configured ports free!
+9:13:23 PM  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+9:13:23 PM  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+9:13:23 PM  [main] 	Starting Check-Timer
+9:13:23 PM  [main] 	Control Panel Ready
+9:14:16 PM  [Apache] 	Attempting to start Apache app...
+9:14:16 PM  [Apache] 	Status change detected: running
+9:14:19 PM  [mysql] 	Problem detected!
+9:14:19 PM  [mysql] 	Port 3306 in use by "Unable to open process"!
+9:14:19 PM  [mysql] 	MySQL WILL NOT start without the configured ports free!
+9:14:19 PM  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+9:14:19 PM  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+9:14:19 PM  [mysql] 	Attempting to start MySQL app...
+9:14:22 PM  [mysql] 	Status change detected: running
+9:14:25 PM  [mysql] 	Status change detected: stopped
+9:14:25 PM  [mysql] 	Error: MySQL shutdown unexpectedly.
+9:14:25 PM  [mysql] 	This may be due to a blocked port, missing dependencies, 
+9:14:25 PM  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+9:14:25 PM  [mysql] 	Press the Logs button to view error logs and check
+9:14:25 PM  [mysql] 	the Windows Event Viewer for more clues
+9:14:25 PM  [mysql] 	If you need more help, copy and post this
+9:14:25 PM  [mysql] 	entire log window on the forums
+9:15:01 PM  [mysql] 	Problem detected!
+9:15:01 PM  [mysql] 	Port 3306 in use by "Unable to open process"!
+9:15:01 PM  [mysql] 	MySQL WILL NOT start without the configured ports free!
+9:15:01 PM  [mysql] 	You need to uninstall/disable/reconfigure the blocking application
+9:15:01 PM  [mysql] 	or reconfigure MySQL and the Control Panel to listen on a different port
+9:15:01 PM  [mysql] 	Attempting to start MySQL app...
+9:15:01 PM  [mysql] 	Status change detected: running
+9:15:03 PM  [mysql] 	Status change detected: stopped
+9:15:03 PM  [mysql] 	Error: MySQL shutdown unexpectedly.
+9:15:03 PM  [mysql] 	This may be due to a blocked port, missing dependencies, 
+9:15:03 PM  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+9:15:03 PM  [mysql] 	Press the Logs button to view error logs and check
+9:15:03 PM  [mysql] 	the Windows Event Viewer for more clues
+9:15:03 PM  [mysql] 	If you need more help, copy and post this
+9:15:03 PM  [mysql] 	entire log window on the forums
+9:20:27 PM  [mysql] 	Attempting to start MySQL app...
+9:20:27 PM  [mysql] 	Status change detected: running
+9:36:07 PM  [Apache] 	Status change detected: stopped
+9:36:07 PM  [Apache] 	Error: Apache shutdown unexpectedly.
+9:36:07 PM  [Apache] 	This may be due to a blocked port, missing dependencies, 
+9:36:07 PM  [Apache] 	improper privileges, a crash, or a shutdown by another method.
+9:36:07 PM  [Apache] 	Press the Logs button to view error logs and check
+9:36:07 PM  [Apache] 	the Windows Event Viewer for more clues
+9:36:07 PM  [Apache] 	If you need more help, copy and post this
+9:36:07 PM  [Apache] 	entire log window on the forums
+9:36:07 PM  [mysql] 	Status change detected: stopped
+9:36:07 PM  [mysql] 	Error: MySQL shutdown unexpectedly.
+9:36:07 PM  [mysql] 	This may be due to a blocked port, missing dependencies, 
+9:36:07 PM  [mysql] 	improper privileges, a crash, or a shutdown by another method.
+9:36:07 PM  [mysql] 	Press the Logs button to view error logs and check
+9:36:07 PM  [mysql] 	the Windows Event Viewer for more clues
+9:36:07 PM  [mysql] 	If you need more help, copy and post this
+9:36:07 PM  [mysql] 	entire log window on the forums
+9:36:07 PM  [main] 	Deinitializing Modules
+9:36:07 PM  [main] 	Deinitializing Control Panel
+

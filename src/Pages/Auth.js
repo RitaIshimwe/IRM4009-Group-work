@@ -1,36 +1,69 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUser, FaLock } from "react-icons/fa";
-import "../styles/Auth.css"; 
-import backgroundImage from "../assets/background1.jpg"; // Import the image
+import { useNavigate } from "react-router-dom";
+import "../styles/Auth.css";
+import backgroundImage from "../assets/background1.jpg";
 
 function Auth() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showForgotPassword, setShowForgotPassword] = useState(false);
-  const [email, setEmail] = useState(""); // State for forgot password input
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (username.trim() === "" || password.trim() === "") {
-      alert("⚠️ Please enter both username and password.");
+      setError("⚠️ Please enter both username and password.");
       return;
     }
 
-    if (username === "admin" && password === "password") {
-      alert("✅ Successfully logged in!");
-    } else {
-      alert("❌ Invalid credentials. Please try again.");
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch('http://localhost/api/login.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          password
+        }),
+        credentials: 'include' // Important for session cookies
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Store user data in localStorage
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('username', data.username);
+        
+        // Redirect to dashboard or home page
+        navigate('/dashboard');
+      } else {
+        setError(data.error || '❌ Invalid credentials. Please try again.');
+      }
+    } catch (err) {
+      setError('❌ Network error. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
   const toggleForgotPasswordModal = () => {
     setShowForgotPassword(!showForgotPassword);
-    setEmail(""); // Clear email input when closing modal
+    setEmail("");
+    setError("");
   };
 
   const handleResetPassword = () => {
     if (email.trim() === "") {
-      alert("⚠️ Please enter your email.");
+      setError("⚠️ Please enter your email.");
       return;
     }
     alert(`📩 Reset link sent to ${email}`);
@@ -54,6 +87,9 @@ function Auth() {
         className="auth-box"
       >
         <h1 className="auth-title">Login</h1>
+        
+        {error && <div className="error-message">{error}</div>}
+        
         <div className="input-group">
           <FaUser className="input-icon" />
           <input
@@ -61,6 +97,7 @@ function Auth() {
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            disabled={loading}
           />
         </div>
         <div className="input-group">
@@ -70,11 +107,17 @@ function Auth() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            disabled={loading}
           />
         </div>
-        <button className="auth-button" onClick={handleLogin}>Login</button>
+        <button 
+          className="auth-button" 
+          onClick={handleLogin}
+          disabled={loading}
+        >
+          {loading ? "Logging in..." : "Login"}
+        </button>
         
-        {/* Forgot password link */}
         <div className="forgot-password" onClick={toggleForgotPasswordModal}>
           Forgot your password?
         </div>
@@ -84,7 +127,12 @@ function Auth() {
       {showForgotPassword && (
         <>
           <div className="modal-overlay" onClick={toggleForgotPasswordModal}></div>
-          <div className="forgot-password-modal">
+          <motion.div 
+            className="forgot-password-modal"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2 }}
+          >
             <h2>Forgot Password</h2>
             <p>Enter your email below to reset your password.</p>
             <input
@@ -94,9 +142,14 @@ function Auth() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button className="reset-button" onClick={handleResetPassword}>Reset Password</button>
-            <button className="close-modal" onClick={toggleForgotPasswordModal}>Close</button>
-          </div>
+            {error && <div className="error-message">{error}</div>}
+            <button className="reset-button" onClick={handleResetPassword}>
+              Reset Password
+            </button>
+            <button className="close-modal" onClick={toggleForgotPasswordModal}>
+              Close
+            </button>
+          </motion.div>
         </>
       )}
     </div>
